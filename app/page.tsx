@@ -7,12 +7,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { WaterDrops } from "@/components/water-drops";
-import { ImpactTracker } from "@/components/impact-tracker";
 import { ComparisonTool } from "@/components/comparison-tool";
+import { WaterWasteCounter } from "@/components/water-waste-counter";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col relative min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-secondary/5 to-background py-20 md:py-32">
         {/* Animated Background */}
@@ -25,14 +25,14 @@ export default function Home() {
 
         <div className="container">
           <div className="mx-auto max-w-4xl text-center space-y-8">
+            {/* Water Waste Counter */}
+            <WaterWasteCounter />
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
-                eTwinning Project
-              </Badge>
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl">
                 <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                   Every Drop Counts
@@ -174,20 +174,6 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Impact Tracker Section */}
-      <section className="py-20">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <ImpactTracker />
-          </motion.div>
         </div>
       </section>
 
