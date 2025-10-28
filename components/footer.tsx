@@ -65,14 +65,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/quiz"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Knowledge Quiz
-                </Link>
-              </li>
-              <li>
                 <a
                   href="https://www.etwinning.net"
                   target="_blank"
@@ -81,6 +73,14 @@ export function Footer() {
                 >
                   eTwinning Project
                 </a>
+              </li>
+              <li>
+                <Link
+                  href="/statistics"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Water Statistics
+                </Link>
               </li>
             </ul>
           </div>

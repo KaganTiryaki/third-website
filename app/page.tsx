@@ -183,29 +183,6 @@ export default function Home() {
               </Card>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <Card className="h-full hover:shadow-lg transition-shadow border-primary/20">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <Award className="w-6 h-6 text-primary" />
-                  </div>
-                  <CardTitle>Test Your Knowledge</CardTitle>
-                  <CardDescription>
-                    Take our interactive quiz and learn about water conservation
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button asChild variant="link" className="p-0">
-                    <Link href="/quiz">Take Quiz →</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            </motion.div>
           </div>
         </div>
       </section>

@@ -38,7 +38,7 @@ export default function NotFound() {
               </Button>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-8">
               <Link
                 href="/statistics"
                 className="p-4 rounded-lg border hover:border-primary/50 hover:bg-primary/5 transition-colors"
@@ -59,13 +59,6 @@ export default function NotFound() {
               >
                 <div className="text-2xl mb-2">💡</div>
                 <div className="text-sm font-medium">Tips</div>
-              </Link>
-              <Link
-                href="/quiz"
-                className="p-4 rounded-lg border hover:border-primary/50 hover:bg-primary/5 transition-colors"
-              >
-                <div className="text-2xl mb-2">🏆</div>
-                <div className="text-sm font-medium">Quiz</div>
               </Link>
             </div>
           </CardContent>
