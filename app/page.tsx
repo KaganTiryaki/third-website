@@ -99,9 +99,9 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-muted/30">
+      <section className="py-20 bg-muted/30">
         <div className="container">
-          <div className="text-center space-y-4 mb-16">
+          <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Explore Water Conservation
             </h2>
@@ -110,33 +110,26 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="group"
             >
-              <Card className="h-full hover:shadow-2xl transition-all duration-300 border-primary/30 hover:border-primary/50 hover:-translate-y-1">
-                <CardHeader className="pb-4">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <TrendingDown className="w-7 h-7 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl mb-2">Statistics & Data</CardTitle>
-                  <CardDescription className="text-base">
-                    Explore real-world data about water waste and conservation impact
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-2">
-                  <Button asChild variant="link" className="p-0 h-auto font-semibold text-primary group-hover:gap-2 transition-all">
-                    <Link href="/statistics">
-                      View Statistics
-                      <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
+              <Link href="/statistics">
+                <Card className="h-full hover:shadow-lg transition-all duration-300 hover:border-primary/50 cursor-pointer group">
+                  <CardHeader>
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                      <TrendingDown className="w-6 h-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-lg">Statistics & Data</CardTitle>
+                    <CardDescription>
+                      Explore real-world data about water waste and conservation impact
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
             </motion.div>
 
             <motion.div
@@ -144,27 +137,20 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="group"
             >
-              <Card className="h-full hover:shadow-2xl transition-all duration-300 border-secondary/30 hover:border-secondary/50 hover:-translate-y-1">
-                <CardHeader className="pb-4">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-secondary/20 to-secondary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <Calculator className="w-7 h-7 text-secondary" />
-                  </div>
-                  <CardTitle className="text-xl mb-2">Water Calculator</CardTitle>
-                  <CardDescription className="text-base">
-                    Calculate your daily water usage and discover ways to save
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-2">
-                  <Button asChild variant="link" className="p-0 h-auto font-semibold text-secondary group-hover:gap-2 transition-all">
-                    <Link href="/calculator">
-                      Start Calculating
-                      <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
+              <Link href="/calculator">
+                <Card className="h-full hover:shadow-lg transition-all duration-300 hover:border-secondary/50 cursor-pointer group">
+                  <CardHeader>
+                    <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors">
+                      <Calculator className="w-6 h-6 text-secondary" />
+                    </div>
+                    <CardTitle className="text-lg">Water Calculator</CardTitle>
+                    <CardDescription>
+                      Calculate your daily water usage and discover ways to save
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
             </motion.div>
 
             <motion.div
@@ -172,27 +158,20 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="group"
             >
-              <Card className="h-full hover:shadow-2xl transition-all duration-300 border-accent/30 hover:border-accent/50 hover:-translate-y-1">
-                <CardHeader className="pb-4">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <BookOpen className="w-7 h-7 text-accent" />
-                  </div>
-                  <CardTitle className="text-xl mb-2">Conservation Tips</CardTitle>
-                  <CardDescription className="text-base">
-                    Learn practical tips for saving water in your daily life
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-2">
-                  <Button asChild variant="link" className="p-0 h-auto font-semibold text-accent group-hover:gap-2 transition-all">
-                    <Link href="/tips">
-                      Explore Tips
-                      <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
+              <Link href="/tips">
+                <Card className="h-full hover:shadow-lg transition-all duration-300 hover:border-accent/50 cursor-pointer group">
+                  <CardHeader>
+                    <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                      <BookOpen className="w-6 h-6 text-accent" />
+                    </div>
+                    <CardTitle className="text-lg">Conservation Tips</CardTitle>
+                    <CardDescription>
+                      Learn practical tips for saving water in your daily life
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
             </motion.div>
           </div>
         </div>

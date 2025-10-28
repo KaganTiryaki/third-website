@@ -45,7 +45,7 @@ export function ImpactTracker() {
       </CardHeader>
       <CardContent className="grid grid-cols-2 gap-4">
         <motion.div
-          key={waterSaved}
+          key={`water-${waterSaved}`}
           initial={{ scale: 1 }}
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ duration: 0.3 }}
@@ -59,7 +59,7 @@ export function ImpactTracker() {
         </motion.div>
 
         <motion.div
-          key={peopleHelped}
+          key={`people-${peopleHelped}`}
           initial={{ scale: 1 }}
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ duration: 0.3 }}
