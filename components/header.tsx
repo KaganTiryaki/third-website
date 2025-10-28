@@ -87,12 +87,6 @@ export function Header() {
                 <Link href="/calculator">Calculator</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                <Link href="/about">About</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 

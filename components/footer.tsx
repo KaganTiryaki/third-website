@@ -49,14 +49,6 @@ export function Footer() {
                   Calculator
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  About
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -134,6 +126,13 @@ export function Footer() {
               Terms of Service
             </Link>
           </div>
+        </div>
+
+        {/* Developer signature */}
+        <div className="mt-6 text-center">
+          <p className="text-xs text-muted-foreground/60">
+            Kağan
+          </p>
         </div>
       </div>
     </footer>

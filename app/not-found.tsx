@@ -31,9 +31,9 @@ export default function NotFound() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="javascript:history.back()">
+                <Link href="/tips">
                   <ArrowLeft className="mr-2 h-4 w-4" />
-                  Go Back
+                  View Tips
                 </Link>
               </Button>
             </div>

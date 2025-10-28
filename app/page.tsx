@@ -272,7 +272,7 @@ export default function Home() {
                   variant="outline"
                   className="border-white text-white hover:bg-white/10"
                 >
-                  <Link href="/about">Learn More</Link>
+                  <Link href="/tips">Learn More</Link>
                 </Button>
               </div>
             </div>
