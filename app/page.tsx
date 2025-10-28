@@ -6,6 +6,9 @@ import { Droplet, TrendingDown, Calculator, BookOpen, Award } from "lucide-react
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { WaterDrops } from "@/components/water-drops";
+import { ImpactTracker } from "@/components/impact-tracker";
+import { ComparisonTool } from "@/components/comparison-tool";
 
 export default function Home() {
   return (
@@ -14,6 +17,7 @@ export default function Home() {
       <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-secondary/5 to-background py-20 md:py-32">
         {/* Animated Background */}
         <div className="absolute inset-0 -z-10">
+          <WaterDrops />
           <div className="absolute top-20 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-1000" />
           <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-pulse delay-500" />
@@ -203,6 +207,34 @@ export default function Home() {
               </Card>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Impact Tracker Section */}
+      <section className="py-20">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <ImpactTracker />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Comparison Tool Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <ComparisonTool />
+          </motion.div>
         </div>
       </section>
 
