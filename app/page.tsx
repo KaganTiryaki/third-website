@@ -110,7 +110,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -182,7 +182,6 @@ export default function Home() {
                 </CardContent>
               </Card>
             </motion.div>
-
           </div>
         </div>
       </section>
@@ -238,16 +237,14 @@ export default function Home() {
                 <Button
                   asChild
                   size="lg"
-                  variant="secondary"
-                  className="bg-white text-primary hover:bg-white/90"
+                  className="bg-white text-primary hover:bg-white/90 shadow-lg"
                 >
                   <Link href="/calculator">Get Started</Link>
                 </Button>
                 <Button
                   asChild
                   size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10"
+                  className="bg-white/10 text-white border-2 border-white hover:bg-white/20 shadow-lg backdrop-blur-sm"
                 >
                   <Link href="/tips">Learn More</Link>
                 </Button>
