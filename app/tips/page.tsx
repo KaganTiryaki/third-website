@@ -314,8 +314,12 @@ export default function TipsPage() {
 
       {/* Tips by Category */}
       <section className="container">
-        <Tabs defaultValue="bathroom" className="space-y-8">
+        <Tabs defaultValue="household" className="space-y-8">
           <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-4">
+            <TabsTrigger value="household">
+              <Home className="h-4 w-4 mr-2" />
+              <span className="hidden sm:inline">House</span>
+            </TabsTrigger>
             <TabsTrigger value="bathroom">
               <Bath className="h-4 w-4 mr-2" />
               <span className="hidden sm:inline">Bathroom</span>
@@ -328,11 +332,23 @@ export default function TipsPage() {
               <Leaf className="h-4 w-4 mr-2" />
               <span className="hidden sm:inline">Outdoor</span>
             </TabsTrigger>
-            <TabsTrigger value="household">
-              <Home className="h-4 w-4 mr-2" />
-              <span className="hidden sm:inline">House</span>
-            </TabsTrigger>
           </TabsList>
+
+          <TabsContent value="household">
+            <div className="space-y-6">
+              <div className="text-center space-y-2">
+                <h2 className="text-2xl font-bold">General Household Tips</h2>
+                <p className="text-muted-foreground">
+                  Simple changes that make a big difference throughout your home
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {householdTips.map((tip, index) => (
+                  <TipCard key={`household-${index}`} tip={tip} index={index} />
+                ))}
+              </div>
+            </div>
+          </TabsContent>
 
           <TabsContent value="bathroom">
             <div className="space-y-6">
@@ -344,7 +360,7 @@ export default function TipsPage() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {bathroomTips.map((tip, index) => (
-                  <TipCard key={index} tip={tip} index={index} />
+                  <TipCard key={`bathroom-${index}`} tip={tip} index={index} />
                 ))}
               </div>
             </div>
@@ -360,7 +376,7 @@ export default function TipsPage() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {kitchenTips.map((tip, index) => (
-                  <TipCard key={index} tip={tip} index={index} />
+                  <TipCard key={`kitchen-${index}`} tip={tip} index={index} />
                 ))}
               </div>
             </div>
@@ -376,23 +392,7 @@ export default function TipsPage() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {outdoorTips.map((tip, index) => (
-                  <TipCard key={index} tip={tip} index={index} />
-                ))}
-              </div>
-            </div>
-          </TabsContent>
-
-          <TabsContent value="household">
-            <div className="space-y-6">
-              <div className="text-center space-y-2">
-                <h2 className="text-2xl font-bold">General Household Tips</h2>
-                <p className="text-muted-foreground">
-                  Simple changes that make a big difference throughout your home
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {householdTips.map((tip, index) => (
-                  <TipCard key={index} tip={tip} index={index} />
+                  <TipCard key={`outdoor-${index}`} tip={tip} index={index} />
                 ))}
               </div>
             </div>
