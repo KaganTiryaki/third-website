@@ -129,12 +129,25 @@
   }
   body {
     @apply bg-background text-foreground;
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+    position: relative;
   }
   html {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+    height: 100%;
+  }
+
+  footer {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  body::after, html::after {
+    display: none !important;
   }
 }
 

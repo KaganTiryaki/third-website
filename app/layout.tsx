@@ -26,13 +26,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ margin: 0, padding: 0, overflowX: 'hidden' }}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col`}
+        style={{ margin: 0, padding: 0, overflowX: 'hidden', position: 'relative' }}
       >
         <ClientLayout>
           <Header />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 relative z-40" style={{ marginBottom: 0 }}>{children}</main>
           <Footer />
         </ClientLayout>
       </body>

@@ -1,11 +1,11 @@
 "use client";
 
-import { ScrollProgress } from "@/components/scroll-progress";
+import { WaterWasteCounter } from "@/components/water-waste-counter";
 
 export function ClientLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <ScrollProgress />
+      <WaterWasteCounter />
       {children}
     </>
   );

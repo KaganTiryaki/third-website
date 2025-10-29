@@ -6,18 +6,15 @@ import { Droplet, TrendingDown, Calculator, BookOpen, Award } from "lucide-react
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { WaterDrops } from "@/components/water-drops";
 import { ComparisonTool } from "@/components/comparison-tool";
-import { WaterWasteCounter } from "@/components/water-waste-counter";
 
 export default function Home() {
   return (
-    <div className="flex flex-col relative min-h-screen">
+    <div className="flex flex-col relative min-h-screen" style={{ position: 'relative' }}>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-secondary/5 to-background py-20 md:py-32">
         {/* Animated Background */}
         <div className="absolute inset-0 -z-10">
-          <WaterDrops />
           <div className="absolute top-20 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-1000" />
           <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-pulse delay-500" />
@@ -25,9 +22,6 @@ export default function Home() {
 
         <div className="container">
           <div className="mx-auto max-w-4xl text-center space-y-8">
-            {/* Water Waste Counter */}
-            <WaterWasteCounter />
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
